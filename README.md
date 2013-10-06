@@ -16,7 +16,7 @@ Then init a notification:
 ```objective-c
 PreadlyNotificationView *notification = [[PreadlyNotificationView alloc] initNotificationWithMessage:@"Lorem ipsum" inViewController:self];
 ```
-And show it by calling:
+Show it by calling:
 ```objective-c
 [notification show];
 ```
