@@ -14,7 +14,6 @@
 		3DD4C5051800B62800B78F8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4C5041800B62800B78F8D /* main.m */; };
 		3DD4C5091800B62800B78F8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4C5081800B62800B78F8D /* AppDelegate.m */; };
 		3DD4C50C1800B62800B78F8D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4C50A1800B62800B78F8D /* Main_iPhone.storyboard */; };
-		3DD4C50F1800B62900B78F8D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4C50D1800B62800B78F8D /* Main_iPad.storyboard */; };
 		3DD4C5121800B62900B78F8D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4C5111800B62900B78F8D /* ViewController.m */; };
 		3DD4C5141800B62900B78F8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4C5131800B62900B78F8D /* Images.xcassets */; };
 		3DD4C51B1800B62900B78F8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD4C51A1800B62900B78F8D /* XCTest.framework */; };
@@ -22,6 +21,7 @@
 		3DD4C51D1800B62900B78F8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD4C4FC1800B62800B78F8D /* UIKit.framework */; };
 		3DD4C5251800B62900B78F8D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DD4C5231800B62900B78F8D /* InfoPlist.strings */; };
 		3DD4C5271800B62900B78F8D /* PreadlyNotificationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4C5261800B62900B78F8D /* PreadlyNotificationViewTests.m */; };
+		3DE7CF2618016FA400C79F19 /* PreadlyNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7CF2518016FA400C79F19 /* PreadlyNotificationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		3DD4C5071800B62800B78F8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DD4C5081800B62800B78F8D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3DD4C50B1800B62800B78F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		3DD4C50E1800B62800B78F8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		3DD4C5101800B62900B78F8D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3DD4C5111800B62900B78F8D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3DD4C5131800B62900B78F8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +54,9 @@
 		3DD4C5221800B62900B78F8D /* PreadlyNotificationViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PreadlyNotificationViewTests-Info.plist"; sourceTree = "<group>"; };
 		3DD4C5241800B62900B78F8D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3DD4C5261800B62900B78F8D /* PreadlyNotificationViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreadlyNotificationViewTests.m; sourceTree = "<group>"; };
+		3DD4C5331800BAFB00B78F8D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3DE7CF2418016FA400C79F19 /* PreadlyNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreadlyNotificationView.h; path = ../../PreadlyNotificationView/PreadlyNotificationView.h; sourceTree = "<group>"; };
+		3DE7CF2518016FA400C79F19 /* PreadlyNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreadlyNotificationView.m; path = ../../PreadlyNotificationView/PreadlyNotificationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		3DD4C4F71800B62800B78F8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DD4C5331800BAFB00B78F8D /* QuartzCore.framework */,
 				3DD4C4F81800B62800B78F8D /* Foundation.framework */,
 				3DD4C4FA1800B62800B78F8D /* CoreGraphics.framework */,
 				3DD4C4FC1800B62800B78F8D /* UIKit.framework */,
@@ -117,9 +120,10 @@
 				3DD4C5071800B62800B78F8D /* AppDelegate.h */,
 				3DD4C5081800B62800B78F8D /* AppDelegate.m */,
 				3DD4C50A1800B62800B78F8D /* Main_iPhone.storyboard */,
-				3DD4C50D1800B62800B78F8D /* Main_iPad.storyboard */,
 				3DD4C5101800B62900B78F8D /* ViewController.h */,
 				3DD4C5111800B62900B78F8D /* ViewController.m */,
+				3DE7CF2418016FA400C79F19 /* PreadlyNotificationView.h */,
+				3DE7CF2518016FA400C79F19 /* PreadlyNotificationView.m */,
 				3DD4C5131800B62900B78F8D /* Images.xcassets */,
 				3DD4C4FF1800B62800B78F8D /* Supporting Files */,
 			);
@@ -231,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD4C50F1800B62900B78F8D /* Main_iPad.storyboard in Resources */,
 				3DD4C5141800B62900B78F8D /* Images.xcassets in Resources */,
 				3DD4C50C1800B62800B78F8D /* Main_iPhone.storyboard in Resources */,
 				3DD4C5031800B62800B78F8D /* InfoPlist.strings in Resources */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DD4C5121800B62900B78F8D /* ViewController.m in Sources */,
+				3DE7CF2618016FA400C79F19 /* PreadlyNotificationView.m in Sources */,
 				3DD4C5091800B62800B78F8D /* AppDelegate.m in Sources */,
 				3DD4C5051800B62800B78F8D /* main.m in Sources */,
 			);
@@ -292,14 +296,6 @@
 				3DD4C50B1800B62800B78F8D /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		3DD4C50D1800B62800B78F8D /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DD4C50E1800B62800B78F8D /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		3DD4C5231800B62900B78F8D /* InfoPlist.strings */ = {
@@ -396,6 +392,7 @@
 				GCC_PREFIX_HEADER = "PreadlyNotificationView/PreadlyNotificationView-Prefix.pch";
 				INFOPLIST_FILE = "PreadlyNotificationView/PreadlyNotificationView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,6 +406,7 @@
 				GCC_PREFIX_HEADER = "PreadlyNotificationView/PreadlyNotificationView-Prefix.pch";
 				INFOPLIST_FILE = "PreadlyNotificationView/PreadlyNotificationView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +472,7 @@
 				3DD4C52C1800B62900B78F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DD4C52D1800B62900B78F8D /* Build configuration list for PBXNativeTarget "PreadlyNotificationViewTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +481,7 @@
 				3DD4C52F1800B62900B78F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
