@@ -4,7 +4,7 @@ A simple drop-in notification control as seen in the upcoming Preadly iOS app.
 
 Description
 -----------
-PreadlyNotificationView is a drop-in notification control that allows you to show simple notification in your app. The notification will then disappear after a couple of seconds, while the user also can dismiss it by tapping it.
+PreadlyNotificationView is a drop-in notification control that allows you to show simple notifications in your app. The notification will then disappear after a couple of seconds, while the user also can dismiss it by tapping it.
 
 Usage
 -----
