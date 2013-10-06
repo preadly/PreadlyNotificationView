@@ -28,7 +28,8 @@ It is also possible to dismiss the notification by calling:
 
 Installation
 ------------
-Drag the folder PreadlyNotificationView into your project. Remember to check "Copy items into destination group's folder (if needed).
+Drag the folder PreadlyNotificationView into your project.      
+Remember to check "Copy items into destination group's folder (if needed).
 
 License
 -------
