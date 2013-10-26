@@ -7,6 +7,7 @@
 //
 
 #import "PreadlyNotificationView.h"
+#import "LWSKeyboardListener.h"
 
 #define ALERT_WIDTH 290
 #define FADEIN_TIME 1.5
@@ -18,6 +19,7 @@
 @property (nonatomic) UIViewController* viewController;
 @property (nonatomic) UILabel* messageLabel;
 @property (strong, nonatomic) UITapGestureRecognizer *hideTap;
+@property (nonatomic) float bottomMargin;
 @end
 
 @implementation PreadlyNotificationView
@@ -44,8 +46,14 @@
         
         [self addSubview:_messageLabel];
         
+        NSNotificationCenter *NotificationCenter = [NSNotificationCenter defaultCenter];
+		[NotificationCenter addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+		[NotificationCenter addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardWillHideNotification object:nil];
+        
+        
         _hideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hide)];
     }
+
     return self;
 }
 
@@ -56,7 +64,9 @@
     } else {
         CGFloat height = [self heightFromMessage:message];
         
-        self = [self initWithFrame:CGRectMake(viewController.view.bounds.size.width / 2 - (ALERT_WIDTH / 2), viewController.view.bounds.size.height - height - 15, ALERT_WIDTH, height)];
+        _bottomMargin = viewController.view.bounds.size.height - height - 15 - [LWSKeyboardListener defaultListener].keyboardHeight;
+        
+        self = [self initWithFrame:CGRectMake(viewController.view.bounds.size.width / 2 - (ALERT_WIDTH / 2), _bottomMargin, ALERT_WIDTH, height)];
         
         if (self) {
             _viewController = viewController;
@@ -105,6 +115,16 @@
 {
     CGSize size = [message sizeWithFont:[UIFont fontWithName:@"HelveticaNeue" size:15.0f] constrainedToSize:CGSizeMake(ALERT_WIDTH - 15, 20000) lineBreakMode:NSLineBreakByCharWrapping];
     return size.height + 5;
+}
+
+- (void)keyboardDidShow:(NSNotification *)Notification
+{
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y - [LWSKeyboardListener defaultListener].keyboardHeight, self.frame.size.width, self.frame.size.height);
+}
+
+- (void)keyboardDidHide:(NSNotification *)Notification
+{
+    self.frame = CGRectMake(self.frame.origin.x, _viewController.view.bounds.size.height - 15 - self.frame.size.height - [LWSKeyboardListener defaultListener].keyboardHeight, self.frame.size.width, self.frame.size.height);
 }
 
 @end

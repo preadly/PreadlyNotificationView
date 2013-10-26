@@ -7,12 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "LWSKeyboardListener.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [LWSKeyboardListener defaultListener];
     return YES;
 }
 							
