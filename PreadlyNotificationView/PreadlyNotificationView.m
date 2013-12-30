@@ -107,6 +107,7 @@
         self.alpha = 0;
     } completion:^(BOOL finished){
         self.isVisible = NO;
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
         [self removeFromSuperview];
     }];
 }
